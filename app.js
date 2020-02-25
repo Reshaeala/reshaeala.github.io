@@ -2,6 +2,26 @@
 
 // const images = ('<img>')
 
+$(() => {
+
+
+const $openWho = $('.who');
+const $closeWho = $('.close');
+const $modal = $('.pokemon');
+
+const openModal = () => {
+  $modal.css('display', 'block');
+}
+
+const closeWho = () => {
+  $modal.css('display', 'none');
+}
+
+$openWho.on('click', openModal);
+console.log($openWho);
+//$closeWho.on('click', $closeWho);
+})
+
 
 $('form').on('submit', (event) => {
 
@@ -30,12 +50,14 @@ $('form').on('submit', (event) => {
       //getting name of pokemon
       $('.pokieName').html(data.name).addClass('pokieName');
 
+
       //  console.log(data.sprites.front_default);
 
       //pokemon picture
       let $pokieImage = $(`<img src= ${data.sprites.front_default}>`).addClass('pokieImage');
 
       $('.pokemon').prepend($pokieImage)
+
 
       //loops through the pokemon abilities
       for (let i = 0; i < data.abilities.length; i++) {
