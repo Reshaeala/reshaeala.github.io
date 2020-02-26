@@ -3,10 +3,9 @@
 }
 img{
   cursor: pointer;
-  width: 40em;
+  width: 17em;
   position: relative;
-  top: 28%;
-  left: 26%;
+  left: 38%;
 }
 body {
   background-repeat: no-repeat;
@@ -75,11 +74,13 @@ input[type='text']{
 }
 
 button{
-  height: 9px;
-  width: 121px;
-  position: relative;
-  top: 28%;
-  left: 26%;
-  width: 21em;
-  height: 5em;
+  background-color: #e40000;
+    position: relative;
+    top: 28%;
+    left: 26%;
+    width: 21em;
+    font-size: medium;
+    height: 5em;
+    font-family: 'Caveat Brush', sans-serif;
+
 }

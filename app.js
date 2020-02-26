@@ -6,25 +6,26 @@ $(() => {
 
 
 const $openWho = $('.who');
-const $closeWho = $('.close');
+
 const $modal = $('.pokemon');
 
 const openModal = () => {
   $modal.css('display', 'block');
 }
 
-const closeWho = () => {
-  $modal.css('display', 'none');
-}
+
 
 $openWho.on('click', openModal);
 console.log($openWho);
-$closeWho.on('click', $closeWho);
+
 })
 
 
 $('form').on('submit', (event) => {
+  const $modal = $('.pokemon');
+   $modal.css('display', 'none');
 
+  // $closeWho.on('submit', $closeWho);
   event.preventDefault();
   //hiding image and ablities so they don't repeat
   $('.pokieImage').hide();
@@ -56,7 +57,7 @@ $('form').on('submit', (event) => {
       //pokemon picture
       let $pokieImage = $(`<img src= ${data.sprites.front_default}>`).addClass('pokieImage');
 
-      $('.pokemon').prepend($pokieImage)
+      $('.image').append($pokieImage)
 
 
       //loops through the pokemon abilities
