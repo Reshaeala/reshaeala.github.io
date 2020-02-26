@@ -19,7 +19,7 @@ const closeWho = () => {
 
 $openWho.on('click', openModal);
 console.log($openWho);
-//$closeWho.on('click', $closeWho);
+$closeWho.on('click', $closeWho);
 })
 
 
