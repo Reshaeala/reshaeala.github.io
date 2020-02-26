@@ -1,5 +1,11 @@
 *{
-  border: 1px red solid;
+  outline: none;
+}
+
+header{
+  font-family: 'Caveat Brush', sans-serif;
+  font-size: 2.5em;
+  text-align: center;
 }
 img{
   cursor: pointer;
@@ -8,9 +14,10 @@ img{
   left: 38%;
 }
 body {
+  background-image: url('background.jpg');
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
+  background-size: cover;
+
 }
 
 .pokemon{
@@ -35,52 +42,68 @@ input{
   font-size: smaller;
   text-align: center;
 }
+
 input[type='text']{
-  height: 9px;
-  width: 121px;
+  height: 2em;
+  width: 10em;
+  background-color: rgba(0,0,0,0);
+  border: black solid .5px;
+  font-size: x-large;
+}
+
+input[type='submit']{
+  width: 9em;
+  height: 4em;
+  border-radius: 45%;
+  background: #343434;
+  color: red;
+  font-size: larger;
+  border: none;
 }
 
 .form{
   position: relative;
-  top: 28%;
-  left: 26%;
-  width: 21em;
-  height: 5em;
-
+  top: 26%;
+  left: 6%;
+  width: 39em;
+  height: 10em;
+  border: none;
 }
+
 .textbox {
   background-position: center;
   background-image: url('https://static.turbosquid.com/Preview/2014/05/25__19_38_41/POKEBALL_LASTRENDER_thumb.jpgaee5aa9b-36fa-4679-a03f-0297d4c6b9a6DefaultHQ.jpg');
-  background-size: 40em;
+  background-size: 38em;
   background-repeat: no-repeat;
-  background-color: white;
-  height: 600px;
-  width: 607px;
-  border-radius: 2px;
-  margin: 10px 370px;
+  height: 31em;
+  width: 32em;
+  border-radius: 100%;
+  margin: 133px 378px;
 }
 
 .choosen{
   position: relative;
   background-position: center;
-  left: 26%;
   background-image: url('https://static.turbosquid.com/Preview/2014/05/25__19_38_41/POKEBALL_LASTRENDER_thumb.jpgaee5aa9b-36fa-4679-a03f-0297d4c6b9a6DefaultHQ.jpg');
-  background-size: 40em;
+  background-size: 38em;
   background-repeat: no-repeat;
-  background-color: white;
-  height: 600px;
-  width: 600px;
-  border-radius: 2px;
+  height: 31em;
+  width: 32em;
+  border-radius: 100%;
+  margin: 99px 370px;
+
 }
 
 button{
-  background-color: #e40000;
-    position: relative;
-    top: 28%;
-    left: 26%;
-    width: 21em;
-    font-size: medium;
-    height: 5em;
-    font-family: 'Caveat Brush', sans-serif;
+  border: none;
+  background-color: rgba(228,0,0,0);
+  position: relative;
+  top: 2%;
+  right: 6%;
+  cursor: pointer;
+  width: 9em;
+  font-size: 4em;
+  height: 5em;
+  font-family: 'Caveat Brush', sans-serif;
 
 }
