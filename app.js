@@ -5,70 +5,72 @@
 $(() => {
 
 
-const $openWho = $('.who');
+  const $openWho = $('.who');
 
-const $modal = $('.pokemon');
+  const $modal = $('.pokemon');
 
-const openModal = () => {
-  $modal.css('display', 'block');
-}
+  const openModal = () => {
+    $modal.css('display', 'block');
+  }
 
 
 
-$openWho.on('click', openModal);
-console.log($openWho);
+  $openWho.on('click', openModal);
+    // console.log($openWho);
 
 })
 
 
 $('form').on('submit', (event) => {
-  const $modal = $('.pokemon');
-   $modal.css('display', 'none');
+    const $modal = $('.pokemon');
+    $modal.css('display', 'none');
 
   // $closeWho.on('submit', $closeWho);
-  event.preventDefault();
-  //hiding image and ablities so they don't repeat
-  $('.pokieImage').hide();
-  $('.pokieAbilities').hide();
-  $('.pokieTypes').hide();
-  $('.yourType').hide();
+    event.preventDefault();
+    //hiding image and ablities so they don't repeat
+    $('.pokieImage').hide();
+    $('.pokieAbilities').hide();
+    $('.pokieTypes').hide();
+    $('.yourType').hide();
+    $('.pokieName').hide();
 
 
 
   //user input
-  const userInput = $('input[type = "text"]').val().toLowerCase();
+    const userInput = $('input[type = "text"]').val().toLowerCase();
 
   //where my information is coming from
-  $.ajax({
-    url:  `https://pokeapi.co/api/v2/pokemon/${userInput}`
-  }).then(
+    $.ajax({
+      url:  `https://pokeapi.co/api/v2/pokemon/${userInput}`
+    }).then(
 
-    (data) => {
-      //remove pokeball image
-      $('.pokeBall').remove()
-      console.log(data);
+        (data) => {
+          //remove pokeball image
+          $('.pokeBall').remove()
+          //console.log(data);
 
-      //getting name of pokemon
-      $('.pokieName').html(data.name).addClass('pokieName');
-
-
-      //  console.log(data.sprites.front_default);
-
-      //pokemon picture
-      let $pokieImage = $(`<img src= ${data.sprites.front_default}>`).addClass('pokieImage');
-
-      $('.image').append($pokieImage)
+          //getting name of pokemon
+          let name =$('<p>').text(data.name).addClass('pokieName');
 
 
-      //loops through the pokemon abilities
-      for (let i = 0; i < data.abilities.length; i++) {
+        //  console.log(data.sprites.front_default);
 
-        //console.log(data.abilities);
-        let $pokieAbilities =$('<p>').text(data.abilities[i].ability.name).addClass('pokieAbilities');
+          //pokemon picture
+          let $pokieImage = $(`<img src=        ${data.sprites.front_default}>`).addClass('pokieImage');
 
-        //  console.log($pokieAbilities);
+          $('.image').prepend(name);
+          $('.image').append($pokieImage)
 
-        $('.ability').append($pokieAbilities)
+
+        //loops through the pokemon abilities
+        for (let i = 0; i < data.abilities.length; i++) {
+
+          //console.log(data.abilities);
+          let $pokieAbilities =$('<p>').text(data.abilities[i].ability.name).addClass('pokieAbilities');
+
+          //  console.log($pokieAbilities);
+
+          $('.ability').append($pokieAbilities)
 
       }
 
@@ -78,6 +80,7 @@ $('form').on('submit', (event) => {
 
         //pokemon types
         let $pokieTypes =$('<p>').text(data.types[i].type.name).addClass('pokieTypes');
+
         $('.type').append($pokieTypes);
 
         if ((data.types[i].type.name) === 'electric') {
@@ -173,7 +176,7 @@ $('form').on('submit', (event) => {
 
       }
 
-      (error)=>{
+    (error)=>{
         console.log('bad request');
       }
 

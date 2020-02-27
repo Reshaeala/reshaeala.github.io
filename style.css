@@ -1,6 +1,6 @@
 *{
   outline: none;
-    font-family: 'Caveat Brush', sans-serif;
+  font-family: 'Caveat Brush', sans-serif;
 }
 
 header{
@@ -11,7 +11,7 @@ header{
 img{
   width: 17em;
   left: 38%;
-  margin: 6em 0em 2em 0em;
+  margin: 0 0 0 0;
 }
 body {
   background-image: url('background.jpg');
@@ -79,7 +79,9 @@ input[type='submit']{
   height: 31em;
   width: 32em;
   border-radius: 100%;
-  margin: 133px 378px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 100%;
 }
 
 .choosen{
@@ -90,15 +92,16 @@ input[type='submit']{
   background-repeat: no-repeat;
   height: 31em;
   width: 32em;
-  border-radius: 100%;
-  margin: 99px 370px 105px;
+  margin-left: auto;
+      margin-right: auto;
+      border-radius: 100%;;
 }
 
 .image{
-    margin: 9em 1em 1em 1em;
+    margin: -4em 1em 1em 1em;
     position: absolute;
-    left: 49%;
-    top: 43em;
+    left: 57%;
+    top: 44em;
 }
 
 button{
@@ -116,25 +119,54 @@ button{
 }
 
 .box1{
-    font-size: 1.5em;
-    margin: 6px;
-
-    width: 12em;
-    height: 3em;
+  font-size: 1.5em;
+  margin: 0 38em;
+  width: 12em;
+  height: 3em;
 }
 
 .box2{
-    font-size: 1.5em;
-    margin: 6px;
-    width: 12em;
+  font-size: 1.5em;
+  margin: 6px;
+  width: 12em;
 
 }
 .box3{
-    font-size: 1.5em;
-    margin: 6px;
+  font-size: 1.5em;
+  margin: 56px;
+  width: 20em;
+  left: 29%;
 
 }
 
-.type{
+.pokieName{
+  font-size: 3em;
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+
+  img{
+    width: 17em;
+    left: 38%;
+    margin: 0 0 0 0;
+  }
+  body {
+    background-size: 250em;
+
+  }
+
+  .textbox {
+      margin: 622px 233px;` `
+  }
+
+  .choosen{
+    margin: 549px 225px 105px
+  }
+
+  .image{
+    left: 62%;
+    top: 94em;
+  }
 
 }
